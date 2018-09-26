@@ -1,0 +1,104 @@
+header { 
+	background: #FFF url(/assets/img/eq.gif) repeat-x top;
+	background-size: 100% 100px;
+    height: auto;
+    background-position: top;
+	background-repeat: repeat-x;
+	padding: 1rem;
+	position: relative;
+}
+header > .img {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	background: #333 url(/assets/img/mpt.jpg) no-repeat center;
+	background-size: cover;
+	border: solid 1px #333;
+}
+header > section::after { content: ''; display: block; clear: both; }
+header > section { text-align: center;}
+header > section > div { 
+	float: left;
+	width: 50%;
+	text-align: center;	
+}
+header > section > h1 {
+	padding: 1rem 0;
+    overflow: hidden;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    border-bottom: solid 1px #DDD;
+	margin: 0;
+}
+.timing { font-size: 2rem; margin: 1rem 0; }
+button.action {
+	float: left;
+	display: block;
+	color: #333;
+	font-size: 7rem;
+	height: 6rem;
+	width: 50%;
+	background-color: transparent;
+}
+button.action:hover { 
+	color: #5BF;
+}
+
+button.mode {
+	background-color: #333;
+	color: #FFF;
+	display: block;
+    margin: 0 auto;
+    padding: .8rem;
+	text-align: center;
+	border-radius: .2rem;
+}
+button.mode:hover{
+	background-color: #5BF;
+}
+
+@media only screen and (min-width: 720px) {
+	header::after { 
+		content: '';
+		display: block; 
+		clear: both;
+	}
+	header > section { 
+		float: left;
+	}
+	header > section > h1 {
+		border: none;
+		color: #FFF;
+		font-size: 3rem;
+		text-align: left;
+		padding-left: 1rem;
+		padding-bottom: 0;
+		text-shadow: 0 0 15px #FFF, 0 0 5px #5BF;
+	}
+	header > section > div {
+		width: auto;
+		padding-left: 1rem;
+	}
+	.timing { float: left; font-size: 3rem; margin: 0; }
+	.mode { 
+		float: left;
+		margin-top: 1rem !important;
+		margin-left: 2rem !important;
+		margin-bottom: 2rem !important;
+	}
+	.action {
+		position: absolute;
+		left: 0.5rem;
+		top: 1.5rem;
+		font-size: 7rem !important;
+		color: rgb(0, 175, 255) !important;
+		text-shadow: 0px 0px 20px #FFF;
+		opacity: .8;
+		height: auto !important;
+		width: auto !important;
+	}
+	header > div { 
+		float: left;
+	}
+}

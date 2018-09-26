@@ -1,0 +1,36 @@
+section {
+	position: fixed;
+    background-color: #FFF;
+    top: 0;
+    right: 0;
+    z-index: 1;
+	max-width: 0; 
+	transition: 400ms max-width;
+	overflow: hidden;
+}
+.show {
+	max-width: 500px;
+}
+
+section > div {
+	float: left; 
+	overflow: hidden;
+	height: 80px;
+	padding: 1rem;
+	margin-right: 1rem;
+	border-left: solid .5rem #5BF;
+}
+
+section.error > div { border-left: solid .5rem #C00; }
+section.success > div { border-left: solid .5rem #5BF; }
+section.warning > div { border-left: solid .5rem #F62; }
+section > span {  
+	position: absolute;
+	top: 50%; 
+	margin-top: -10px;	
+	right: 5px;
+	cursor: pointer;
+	color: #888;
+}
+section > span.animate-spin { cursor: auto; }
+section > span:hover:not(.animate-spin) { color: #5BF; } 

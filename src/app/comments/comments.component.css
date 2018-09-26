@@ -1,0 +1,55 @@
+section {
+	padding: 1rem;
+}
+section > h1 {
+	font-weight: 600;
+	margin-top: 0;
+}
+label {
+	display: block;
+	text-transform: uppercase;
+	font-size: .8rem;
+	font-weight: bold; 
+	letter-spacing: .1rem;
+	margin-bottom: .5rem;
+}
+
+input, textarea {
+	border-radius: .2rem;
+	padding: .8rem;
+	width: 100%;
+	border: solid 1px #DDD;
+	font-family: monospace;
+}
+textarea{ 
+	height: 5rem;
+}
+.code{
+	text-align: center;
+}
+p > span::after {
+	content: '';
+	display: block; 
+	clear: both;
+}
+p > span > * { 
+	width: 30%;
+	margin-right: 3.334%;
+	float: left;
+}
+p > span > span {
+	height: 2.7rem;
+	background: #DDD no-repeat top;
+	background-size: cover;
+	display: block;
+	background-position: center;
+}
+p > span > button {
+	padding: .8rem .5rem;
+	background-color: #333;
+	color: #FFF;
+	border-radius: .2rem;
+}
+@media only screen and (min-width: 500px){
+	section { border-left: solid 1px #DDD; }
+}

@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(/assets/css/fontello.css);
+@import url(/assets/css/animation.css);
+@import url(/assets/css/titillium.css);
+
+* { box-sizing: border-box; outline: 0; }
+body
+{
+    background: #000 url(/assets/img/bg.jpg) no-repeat top left;
+    background-size: 100% auto;
+    font-family: 'Titillium Web', 'Optima', 'Helvetica';
+}
+button { border: none; cursor: pointer; }
+
+#app { max-width: 1024px; margin: 0 auto; min-height: 320px;  }
+section.main { background-color: #F1F1F1; border: solid 1px #DDD; padding-bottom: 2rem; }
+
+
+.row { display: block; clear: both; }
+.row::after { display: block; clear: both; content: ''; }
+
+[class*="col-"] {
+    float: left;
+	padding: 1rem;
+	width: 100%;
+}
+
+@media only screen and (min-width: 550px) {
+    .col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+}

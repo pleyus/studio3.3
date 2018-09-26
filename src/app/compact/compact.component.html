@@ -1,0 +1,8 @@
+<div id="compact">
+	<div class="img" [ngStyle]="$.CProgram.img ? {'background-image': 'url(/uploads/radio/' + $.CProgram.img + ')'} : {}"></div>
+	<h1>{{$.CProgram.name ? $.CProgram.name : 'Música para ti'}}</h1>
+	<button (click)="PlayPause()" class="action">
+		<span class="icon-{{GetOption('playing') ? 'pause' : 'play'}}"></span>
+	</button>
+	<button class="mode" (click)="SetOption('compact', false)">Vista normal</button>
+</div>

@@ -1,0 +1,22 @@
+<section class="col-6">
+	<h1>Programación <span>Studio3.3</span></h1>
+	<div>
+		<ng-container *ngFor="let D of Days">
+			<h2 class="{{D.day == DAY_SELECTED ? 'selected' : ''}}"  (click)="DAY_SELECTED = D.day">{{D.name}}</h2>
+			<ul class="{{D.day == DAY_SELECTED ? 'selected' : ''}}">
+				<ng-container *ngFor="let G of $.Guide">
+					<ng-container *ngFor="let d of G.days">
+						<li *ngIf="d.day == D.day">
+							<i>{{ sTime(d.start) }} – {{sTime(d.end)}}</i>
+							<p>
+								<b>{{G.name}}</b>
+								{{G.hosts.join(' | ')}}
+							</p>
+						</li>
+					</ng-container>
+					
+				</ng-container>
+			</ul>
+		</ng-container>
+	</div>
+</section>

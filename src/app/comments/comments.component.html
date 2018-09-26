@@ -1,0 +1,19 @@
+<section class="col-6" *ngIf="Code != ''">
+	<h1>¿Algo que decir?</h1>
+	<p>
+		<label for="my-name">¿Quien eres?</label>
+		<input type="text" id="my-name" placeholder="Tu nombre o apodo" [(ngModel)]="Name">
+	</p>
+	<p>
+		<label for="i-say">Tu mensaje</label>
+		<textarea id="i-say" placeholder="Lo que nos quieres comentar..." [(ngModel)]="Message"></textarea>
+	</p>
+	<p>
+		<label for="the-code">Código</label>
+		<span>
+			<span [ngStyle]="{ 'background-image' : 'url(http://unitam.edu.mx' + Code  + ')' }"></span>
+			<input  maxlength="4" id="the-code" type="text" class="code" placeholder="Código" [(ngModel)]="Response">
+			<button (click)="SendMessage()" class="primary">Enviar</button>
+		</span>
+	</p>
+</section>

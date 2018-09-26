@@ -1,0 +1,8 @@
+section {
+    padding: 1rem;
+    background-color: #444;
+	color: #FFF;
+	font-size: .9rem;
+    text-align: center;
+}
+span { display: block; font-weight: bold; }

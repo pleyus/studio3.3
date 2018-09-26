@@ -1,0 +1,13 @@
+<header>
+	<div class="img" [ngStyle]="$.CProgram.img ? {'background-image': 'url(/uploads/radio/' + $.CProgram.img + ')'} : {}"></div>
+	<section>
+		<h1>{{$.CProgram.name ? $.CProgram.name : 'Música para ti'}}</h1>
+		<div>
+			<div class="timing">{{$.time.text}}</div>
+			<button class="mode" (click)="SetOption('compact', true)">Modo compacto</button>
+		</div>
+		<button class="action" (click)="PlayPause()">
+			<span class="icon-{{GetOption('playing') ? 'pause' : 'play'}}"></span>
+		</button>
+	</section>
+</header>

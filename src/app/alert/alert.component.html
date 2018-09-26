@@ -1,0 +1,5 @@
+<section class="{{ $.alert.showing ? 'show' : '' }} {{GetClass()}}" >
+	<div [innerHTML]="$.alert.message"></div>
+	<span *ngIf="$.alert.type >= 0" class="icon-cancel" (click)="$.ClearAlert()"></span>
+	<span *ngIf="$.alert.type == -1" class="icon-spin4 animate-spin"></span>
+</section>
