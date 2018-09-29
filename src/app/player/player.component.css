@@ -1,4 +1,4 @@
-header { 
+header {
 	background: #FFF url(/assets/img/eq.gif) repeat-x top;
 	background-size: 100% 100px;
     height: auto;
@@ -17,19 +17,23 @@ header > .img {
 }
 header > section::after { content: ''; display: block; clear: both; }
 header > section { text-align: center;}
-header > section > div { 
+header > section > div {
 	float: left;
 	width: 50%;
-	text-align: center;	
+	text-align: center;
 }
 header > section > h1 {
 	padding: 1rem 0;
-    overflow: hidden;
-    font-weight: normal;
-    color: #333;
-    text-align: center;
-    border-bottom: solid 1px #DDD;
-	margin: 0;
+  overflow: hidden;
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  border-bottom: solid 1px #DDD;
+  margin: 0;
+  max-width: 450px;
+  overflow: hidden;
+  max-height: 85px;
+  line-height: 90px;
 }
 .timing { font-size: 2rem; margin: 1rem 0; }
 button.action {
@@ -41,7 +45,7 @@ button.action {
 	width: 50%;
 	background-color: transparent;
 }
-button.action:hover { 
+button.action:hover {
 	color: #5BF;
 }
 
@@ -59,12 +63,12 @@ button.mode:hover{
 }
 
 @media only screen and (min-width: 720px) {
-	header::after { 
+	header::after {
 		content: '';
-		display: block; 
+		display: block;
 		clear: both;
 	}
-	header > section { 
+	header > section {
 		float: left;
 	}
 	header > section > h1 {
@@ -81,7 +85,7 @@ button.mode:hover{
 		padding-left: 1rem;
 	}
 	.timing { float: left; font-size: 3rem; margin: 0; }
-	.mode { 
+	.mode {
 		float: left;
 		margin-top: 1rem !important;
 		margin-left: 2rem !important;
@@ -98,7 +102,7 @@ button.mode:hover{
 		height: auto !important;
 		width: auto !important;
 	}
-	header > div { 
+	header > div {
 		float: left;
 	}
 }
