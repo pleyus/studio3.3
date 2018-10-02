@@ -11,7 +11,7 @@ export class AppComponent {
   private options = {
     playing: false,
     compact: false,
-    stream: 'http://16613.live.streamtheworld.com/XEJP_FM_SC'
+    stream: 'http://72.249.55.100:9648/stream/4/'
   };
   public CProgram = {
     img: false,
@@ -212,7 +212,7 @@ export class AppComponent {
   constructor(private S: AppService) {
     //  Generamos un Id unico para este oyente
     this.LISTID =
-      localStorage.getItem('LISTID') != ''
+      localStorage.getItem('LISTID') !== ''
         ? '' + localStorage.getItem('LISTID')
         : '';
     if (this.LISTID.length < 32) {
@@ -223,7 +223,7 @@ export class AppComponent {
     //  Cargamos la configuración
     this.options.compact = localStorage.getItem('compact') === 'true';
     this.options.playing =
-      localStorage.getItem('playing') == 'true' && !this.isMobile();
+      localStorage.getItem('playing') === 'true' && !this.isMobile();
     localStorage.setItem('playing', this.options.playing ? 'true' : 'false');
 
     if (this.options.playing) {
