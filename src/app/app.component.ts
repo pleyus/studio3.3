@@ -103,18 +103,21 @@ export class AppComponent {
       h = Today.getHours() * 60 + Today.getMinutes();
     let found = false;
 
+    //  Por cada guide
     this.Guide.forEach(G => {
-      if (found) { return; }
+      if (!found) {
+        G.days.forEach(D => {
+          if (!found) {
+            const hi = (D.start.h * 60) + (D.start.m * 1),
+              hf = (D.end.h * 60) + (D.end.m * 1);
 
-      G.days.forEach(D => {
-        if (found) { return; }
-        const hi = D.start.h * 60 + D.start.m,
-          hf = D.end.h * 60 + D.end.m;
-        if (Today.getDay() === D.day && h >= hi && h <= hf) {
-          this.CProgram = G;
-          found = true;
-        }
-      });
+            if (Today.getDay() === (D.day * 1) && h >= hi && h <= hf) {
+              this.CProgram = G;
+              found = true;
+            }
+          }
+        });
+      }
     });
     if (!found) {
       this.CProgram = {
